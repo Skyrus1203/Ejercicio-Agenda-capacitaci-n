@@ -17,7 +17,7 @@ func init() {
 	ns := beego.NewNamespace("/v1",
 		beego.NSNamespace("/contacto_parametro",
 			beego.NSInclude(
-				&controllers.ContactosParametrosController{},
+				&controllers.Personas_parametrosController{},
 			),
 		),
 	)

@@ -1,9 +1,10 @@
 package main
 
 import (
-	_ "github.com/udistrital/AgendaBeego/parametros_mid_v1/routers"
-	"github.com/astaxie/beego/plugins/cors"
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/plugins/cors"
+	_ "github.com/udistrital/AgendaBeego/parametros_mid_v1/routers"
+	"github.com/udistrital/utils_oas/xray"
 )
 
 func main() {
@@ -23,5 +24,6 @@ func main() {
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 	}))
+	xray.InitXRay()
 	beego.Run()
 }
